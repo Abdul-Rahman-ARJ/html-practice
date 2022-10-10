@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        fieldset
+        {
+            background-color: rgba(0, 0, 0, 0.347);
+            margin: 20px;
+            padding: 20px 70px;
+            border-radius: 5px;
+        }
+        
+        fieldset label{
+            color: white;
+            margin: 0px 10px;
+           
+        }
+        input{
+            width: 180px;
+            height: 20px;
+            margin: 10px 20px;
+            /* margin-top: 10px; */
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+        button{
+            background-color: blue;
+            border-radius: 6px;
+            text-align: center;
+            padding:5px 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            <h2>Latest Form Validations</h2>
+        </legend>
+        <form action="">
+            <label for="Email">Email</label><br>
+            <input type="email" placeholder="Enter Email" required"> <br>
+
+
+
+
+            <label for="country">Country Code</label><br>
+            <input type="text" placeholder="Enter Country code" required pattern="[A-Za-z]{3}" title="Enter 3 digit country Code" autofocus> <br>
+
+
+
+
+            <label for="pw1">Password 1</label><br>
+            <input type="password" placeholder="Enter Password" required pattern=".{6,}" title="Enter 6 digit password"> <br>
+            <label for="pw2">Password 2</label><br>
+            <input type="password" placeholder="Enter Password" required pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}" title="Enter One small,capital letter ,one digit and length should be greater than 8"> <br>
+
+
+
+
+            <label for="phone">Indian Phone Number</label><br>
+            <input type="tel" placeholder="Enter Phone number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Enter phone in this format 123-123-1234">&nbsp; <span>format type - 123-123-1234</span><br>
+
+
+
+
+            <label for="date Min">Enter Date After 2020-01-01</label><br>
+            <input type="date" required  min="2020-01-01" max="2021-01-01"><br>
+            <label for="date max">Enter Before Date  2000-01-01</label><br>
+            <input type="date" required  max="2000-01-01"><br>
+
+
+            <label for="Quantity">Quantity</label><br>
+            <input type="number" placeholder="Enter quantity" required min="1" max="5"> <br>
+
+
+
+
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 5 Form</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: lightblue;
+        }
+        form{
+            background-color: lightgray;
+            text-align: left;
+            padding: 20px;
+            margin: 40px 40px;
+            border-radius: 30px;
+
+        }
+        form input{
+            margin-left: 30px;
+            text-align: start;
+            border: 5px solid black;
+            margin-top: 5px;
+            border-radius: 50px;
+            text-shadow: 15px;
+        }
+        fieldset{
+            border-radius: 40px;
+            padding: 50px;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Form For User Input</h1>
+    <fieldset>    
+        <legend>My Personal data:</legend>
+        <form action="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="enter your email" /><br />
+        <label for="password">Put your password</label>
+        <input type="password" id="password" name="password" placeholder="enter your password" /><br />
+        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <label for="html">HTML</label><br />
+        <input type="radio" id="css" name="fav_language" value="CSS" />
+        <label for="css">CSS</label><br />
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+        <label for="javascript">JavaScript</label><br />
+        <label for="date">Select bday</label>
+        <input type="date" name="bday" id="date"><br/>
+        <label for="number">Quantity (1-5):        </label>
+        <input type="number" min="1" max="5" name="bday" id="number"><br/>
+        <label for="file">choose your image        </label>
+        <input type="file"name="file" id="file" value="some"><br/>
+        <label for="file">choose your image        </label>
+        <input type="range" name="range" id="range"><br/>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <pre id="upload">
+
+        </pre>
+        <script>
+            document.getElementById("upload").innerHTML = document.getElementById("file").value()
+        </script>
+    </form>
+</fieldset>
+
+</body>
+
+</html>

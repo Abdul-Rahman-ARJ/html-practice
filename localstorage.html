@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("firstname", "Abdul");
+  localStorage.setItem("lastname", "Rahman");
+  localStorage.setItem("hobbie","Golf")
+  // Retrieve
+//   document.getElementById("result").append.apply = "First Name : "+localStorage.getItem("firstname") +  " Last Name : "+ localStorage.getItem("lastname");
+  document.getElementById("result").innerHTML = "First Name : "+localStorage.getItem("firstname") +  " Last Name : "+ localStorage.getItem("lastname") +"<br>"+"Full Name : "+localStorage.getItem("firstname")+" " + localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+</body>
+</html>

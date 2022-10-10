@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1 day 2</title>
+    <style>
+
+select{
+    margin: 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+        option{
+            /* margin: 15px; */
+            width: 150px;
+            height: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        
+        .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+        fieldset{
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        form {
+            background-color: rgba(210, 233, 127, 0.747);
+            padding: 2rem 10rem;
+            margin: 0;
+            color: black;
+            text-align: left;
+        }
+
+        form input {
+            background-color: lightgray;
+            border-radius: 8px;
+            border: 4px solid rebeccapurple;
+        }
+
+        
+        input:checked {
+            background-color: pink;
+        }
+        /* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* font-size: 10px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left:4px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+textarea{
+    background-color: #2196F3;
+    color: black;
+    border-radius: 20px;
+    padding: 5px;
+    border: 0px;
+}
+textarea ::placeholder{
+    background-color:black;
+    /* color: black; */
+}
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Task 1 Form</legend>
+        <form action="">
+            <label for="fname">Fname</label><br />
+            <input type="text" id="fname" name="fname" /><br />
+            <label for="lname">Lname</label><br />
+            <input type="text" id="lname" name="lname" /><br />
+            <label for="password">Password</label><br />
+            <input type="password" id="password" name="password" /><br />
+            <br>
+            <div class="main">
+                <div class="row">
+                    <label for="radio">Radio Buttons</label><br />
+                    <input type="radio" id="html" name="fav_language" value="HTML" />
+                    <label for="html">HTML</label><br />
+                    <input type="radio" id="css" name="fav_language" value="CSS" />
+                    <label for="css">CSS</label><br />
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+                    <label for="javascript">JavaScript</label><br />
+                    <input type="radio" id="python" name="fav_language" value="Python" />
+                    <label for="python">Python</label><br />
+                </div>
+                <br>
+                <div class="row">
+                    <label for="checkbox">Checkboxes</label>
+                    <label class="container">I Have bike 
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">I Have Car
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">I Have House
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">I Have Wife
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <label for="cars">Choose a car:</label>
+            <br />
+            <select name="cars" id="cars" size="3" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="audi">BMW</option>
+            </select><br />
+            <label for="info">Enter your message</label><br />
+            <textarea name="info" id="info" cols="30" rows="10" placeholder="Enter your concern"></textarea><br>
+            <button class = "button" type="submit">Submit The Details</button>
+            <button class = "button" type="reset">Reset The Details</button>
+        </form>
+    </fieldset>
+</body>
+
+</html>
